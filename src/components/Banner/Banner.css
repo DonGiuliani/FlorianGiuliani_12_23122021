@@ -1,0 +1,20 @@
+#banner {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.4em 0 0.4em 0;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+}
+
+.banner__button {
+    color: #FFF;
+}
+
+#logo {
+    width: 7em;
+    justify-self: center;
+    align-self: center;
+}

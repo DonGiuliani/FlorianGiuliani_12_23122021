@@ -1,0 +1,14 @@
+#welcome {
+    margin-bottom: 2em;
+}
+
+#user__name {
+    color: red;
+    margin-left: 0.3em;
+}
+
+#welcome--message {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0;
+}

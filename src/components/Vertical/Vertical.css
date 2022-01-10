@@ -1,0 +1,29 @@
+#vertical {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #000;
+}
+
+#icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    margin: 0.7em;
+    width: 2em;
+    padding: 0.8em;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+#copyright {
+    color: #FFF;
+    transform: rotate(-90deg);
+    font-size: 0.5em;
+    width: 100px;
+    margin-top: 100px;
+}
