@@ -3,6 +3,13 @@ import { getPerformanceData } from "../../services/dataManager";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import "./Charts.css";
 
+/**
+ * Create the Performance Chart with Recharts
+ *
+ * @param   {Object}  props
+ *
+ * @return  {HTMLElement}
+ */
 export default function PerformanceChart(props) {
 
     const [performance, setPerformance] = useState("loading")
@@ -11,8 +18,6 @@ export default function PerformanceChart(props) {
         setPerformance(await getPerformanceData(props.id))
     })
 
-
-    console.log(performance);
     return (
         performance === "loading" ? "loading" :
             <div id="performance__chart">

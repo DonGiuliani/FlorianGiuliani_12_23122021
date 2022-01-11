@@ -1,5 +1,12 @@
 import "./WelcomeMessage.css"
 
+/**
+ * Create a personalised welcome message for each user
+ *
+ * @param   {String}  props
+ *
+ * @return  {HTMLElement}
+ */
 export default function WelcomeMessage(props) {
     return (
         <div id="welcome">

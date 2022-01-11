@@ -3,6 +3,13 @@ import { getSessionData } from "../../services/dataManager";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import "./Charts.css";
 
+/**
+ * Create the Session Chart with Recharts
+ *
+ * @param   {Object}  props
+ *
+ * @return  {HTMLElement}
+ */
 export default function SessionChart(props) {
 
     const [session, setSession] = useState("loading")
@@ -18,10 +25,9 @@ export default function SessionChart(props) {
                     Durée moyenne des sessions
                 </p>
                 <ResponsiveContainer height={145}>
-                    <LineChart data={session.data.sessions}>
+                    <LineChart data={session.sessions}>
                         <XAxis dataKey="day" stroke="#FFF"/>
                         <Line type="monotone" dataKey="sessionLength" stroke="#FFF" dot={false} />
-                        <Tooltip />
                     </LineChart>
                 </ResponsiveContainer>
             </div>

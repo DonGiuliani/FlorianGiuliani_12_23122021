@@ -56,10 +56,23 @@
 
 #score__chart {
     border-radius: 10px;
-    height: fit-content;
+    height: 205px;
     background-color: #F1F1F1;
 }
 
 #score {
     margin: 1em 0 0 1em;
+}
+
+#score__chart .radialBarText {
+    width: 30%;
+    text-align: center;
+    background-color: #F1F1F1;
+}
+
+#score__chart .container{
+    display: flex;
+    position: relative;
+    top: -8rem;
+    justify-content: center;
 }

@@ -3,6 +3,13 @@ import { getActivityData } from "../../services/dataManager";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import "./Charts.css";
 
+/**
+ * Create the Activity Chart with Recharts
+ *
+ * @param   {Object}  props
+ *
+ * @return  {HTMLElement}
+ */
 export default function ActivityChart(props) {
 
     const [activity, setActivity] = useState("loading")
@@ -29,9 +36,8 @@ export default function ActivityChart(props) {
                         </p>
                     </div>
                 </div>
-                <ResponsiveContainer width="100%" height="70%">
-                    <BarChart data={activity.data.sessions}>
-                        
+                <ResponsiveContainer width="100%" height={150}>
+                    <BarChart data={activity.sessions}> 
                         <CartesianGrid strokeDasharray="3 3" />
                         <Bar dataKey="calories" fill="#E60000" barSize={10} radius={[10, 10, 0, 0]} />
                         <Bar dataKey="kilogram" fill="#000" barSize={10} radius={[10, 10, 0, 0]} />

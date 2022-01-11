@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+/**
+ * Create Home Page to select user profile
+ *
+ * @return  {HTMLElement}
+ */
 export default function Home() {
 
     return (
         <div id="home">
-            <h1>Home</h1>
+            <h1>Bienvenue sur Sportsee</h1>
 
             <Link to="/user/12">
                 <p>

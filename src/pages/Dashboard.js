@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { getPersonalUsersData } from "../services/dataManager";
 import WelcomeMessage from "../components/User/WelcomeMessage";
@@ -9,6 +10,11 @@ import PerformanceChart from "../components/Charts/PerformanceChart";
 import ScoreChart from "../components/Charts/ScoreChart";
 import "./Dashboard.css"
 
+/**
+ * Compile the Dashboard Page for each user
+ *
+ * @return  {HTMLElement}
+ */
 export default function Dashboard() {
 
     const { id } = useParams();
@@ -17,24 +23,24 @@ export default function Dashboard() {
         if (users !== "loading") return;
         setUsers(await getPersonalUsersData(id));
     });
-
-    console.log(users);
     
+    if (users === null) return  <Navigate to="/404" />
+
     return (
         users === "loading" ? "loading" :
             <div id="dashboard">
                 <div id="charts">
                     <div id="charts__bloc">
-                        <WelcomeMessage name={users.data.userInfos.firstName} />
+                        <WelcomeMessage name={users.userInfos.firstName} />
                         <ActivityChart id={id} />
                     </div>
                     <div id="chart__line">
                         <SessionChart id={id} />
                         <PerformanceChart id={id} />
-                        <ScoreChart score={users.data.todayScore} />
+                        <ScoreChart score={users.todayScore} />
                     </div>
                 </div>
-                <KeyData keyData={users.data.keyData} />
+                <KeyData keyData={users.keyData} />
             </div>
     )
 }

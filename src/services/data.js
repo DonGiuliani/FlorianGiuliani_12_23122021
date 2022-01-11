@@ -1,3 +1,7 @@
+/**
+ * API Mock used when server is not used
+ */
+
 const USER_MAIN_DATA = [
     {
         userId: 12,

@@ -4,6 +4,13 @@ import IconCarbs from "../../images/iconCarbs.png";
 import IconFat from "../../images/iconFat.png";
 import "./KeyData.css"
 
+/**
+ * Create divs which contains user infos about alimentation
+ *
+ * @param   {Object}  props
+ * @param   {Number}  keyData
+ * @return  {HTMLElement}
+ */
 export default function KeyData(props) {
     let keyData = props.keyData
 
