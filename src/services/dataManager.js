@@ -25,6 +25,7 @@ const tradPerformances = {
     5 : 'Vitesse',
     6 : 'Intensité'
 };
+
 const useMockedData    = false;
 
 let data = null;

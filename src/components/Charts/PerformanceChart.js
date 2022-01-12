@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { getPerformanceData } from "../../services/dataManager";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import "./Charts.css";
 
 /**
  * Create the Performance Chart with Recharts
  *
  * @param   {Object}  props
+ * @param   {Number}  props.id
+ * @param   {Array}   performance
  *
  * @return  {HTMLElement}
  */

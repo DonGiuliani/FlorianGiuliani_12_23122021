@@ -9,6 +9,11 @@ import "./KeyData.css"
  *
  * @param   {Object}  props
  * @param   {Number}  keyData
+ * @param   {Number}  keyData.calorieCount
+ * @param   {Number}  keyData.proteinCount
+ * @param   {Number}  keyData.carbohydrateCount
+ * @param   {Number}  keyData.lipidCount
+ * 
  * @return  {HTMLElement}
  */
 export default function KeyData(props) {

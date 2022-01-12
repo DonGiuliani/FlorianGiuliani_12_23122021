@@ -12,6 +12,11 @@ import "./Dashboard.css"
 
 /**
  * Compile the Dashboard Page for each user
+ * 
+ * @param   {Number}  id
+ * @param   {String}  users.userInfos.firstName
+ * @param   {Number}  users.todayScore
+ * @param   {Object}  users.keyData
  *
  * @return  {HTMLElement}
  */

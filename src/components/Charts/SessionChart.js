@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { getSessionData } from "../../services/dataManager";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, ResponsiveContainer } from 'recharts';
 import "./Charts.css";
 
 /**
  * Create the Session Chart with Recharts
  *
  * @param   {Object}  props
+ * @param   {Number}  props.id
+ * @param   {Array}   session.sessions
  *
  * @return  {HTMLElement}
  */

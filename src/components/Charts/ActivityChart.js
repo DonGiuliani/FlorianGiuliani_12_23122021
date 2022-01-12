@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { getActivityData } from "../../services/dataManager";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import "./Charts.css";
 
 /**
  * Create the Activity Chart with Recharts
  *
  * @param   {Object}  props
+ * @param   {Number}  props.id
+ * @param   {Array}   activity.sessions
  *
  * @return  {HTMLElement}
  */

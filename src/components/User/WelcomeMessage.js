@@ -3,7 +3,8 @@ import "./WelcomeMessage.css"
 /**
  * Create a personalised welcome message for each user
  *
- * @param   {String}  props
+ * @param   {Object}  props
+ * @param   {String}  props.name
  *
  * @return  {HTMLElement}
  */
